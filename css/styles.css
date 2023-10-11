@@ -1,0 +1,113 @@
+:root {
+    --blanco: #FFFFFF;
+    --negro: #212121;
+    --primario: #ffc107;
+    --secundario: #0097a7;
+    --fondo: #;
+}
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-snap-type: y mandatory;
+}
+*, *:before, *:after { /* para no tener que calcular los boxmodels */
+    box-sizing: inherit;
+}
+body{
+    font-size: 16px; /* 1 rem = 10px */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--fondo);
+}
+h1{
+    font-size: 3.8rem;
+}
+h2{
+    font-size: 2.8rem;
+}
+h3{
+    font-size: 1.8rem;
+}
+h1,h2,h3,td,th{
+    text-align: center;
+}
+.contenedor{
+    max-width: 120rem;
+    margin: 2rem auto 1rem auto;
+}
+.sombra{
+    box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.54);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+/* Header styles */
+.titulo {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem;
+}
+
+.titulo h1 {
+    margin: 0;
+    font-size: 3.6rem;
+}
+
+
+/* sobre mi*/
+.datos{
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr; /*33.3% 33.3% 33.3%; repeat(3, 1fr)*/ 
+    column-gap: 1rem; /*separacion de columnas*/
+}
+@media (max-width: 768px) {
+    .datos{
+        grid-template-columns: 1fr;
+    }
+}
+.dato{
+    display: flex;
+    flex-direction: column;
+    /* definimos que se movera por columnas */
+    align-items: center;
+}
+.dato h3{
+    color: var(--secundario);
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.dato p{
+    line-height: 1.7;
+}
+
+
+/* tabla */
+
+.tabla {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.tabla td, .tabla th {
+    border: 1px solid #ddd;
+    padding: 8px;
+
+}
+
+.tabla tr:nth-child(even){background-color: #f2f2f2;}
+
+.tabla tr:hover {background-color: #ddd;}
+
+.tabla th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+
