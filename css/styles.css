@@ -1,9 +1,12 @@
 :root {
     --blanco: #FFFFFF;
     --negro: #212121;
-    --primario: #ffc107;
+
     --secundario: #0097a7;
-    --fondo: #;
+
+    --header: #3498db;
+    --fondo: #87ceeb;
+    --contenedor: #aad8e6;
 }
 html{
     font-size: 62.5%;
@@ -31,22 +34,23 @@ h3{
 }
 h1,h2,h3,td,th{
     text-align: center;
+    text-transform: capitalize;
 }
 .contenedor{
+    background-color: var(--contenedor);
     max-width: 120rem;
     margin: 2rem auto 1rem auto;
 }
 .sombra{
     box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.54);
-    background-color: var(--blanco);
     padding: 2rem;
     border-radius: 1rem;
 }
 
 /* Header styles */
 .titulo {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--header);
+    color: var(--blanco);
     padding: 2rem;
 }
 
@@ -59,8 +63,8 @@ h1,h2,h3,td,th{
 /* sobre mi*/
 .datos{
     display: grid;
-    grid-template-columns:1fr 1fr 1fr; /*33.3% 33.3% 33.3%; repeat(3, 1fr)*/ 
-    column-gap: 1rem; /*separacion de columnas*/
+    grid-template-columns:1fr 1fr 1fr;
+    column-gap: 1rem;
 }
 @media (max-width: 768px) {
     .datos{
@@ -70,13 +74,11 @@ h1,h2,h3,td,th{
 .dato{
     display: flex;
     flex-direction: column;
-    /* definimos que se movera por columnas */
     align-items: center;
 }
 .dato h3{
     color: var(--secundario);
     font-weight: bold;
-    text-transform: capitalize;
 }
 .dato p{
     line-height: 1.7;
@@ -84,7 +86,6 @@ h1,h2,h3,td,th{
 
 
 /* tabla */
-
 .tabla {
     border-collapse: collapse;
     width: 100%;
@@ -92,21 +93,21 @@ h1,h2,h3,td,th{
 }
 
 .tabla td, .tabla th {
-    border: 1px solid #ddd;
+    border: 2px solid var(--negro);
     padding: 8px;
 
 }
 
-.tabla tr:nth-child(even){background-color: #f2f2f2;}
+.tabla tr:nth-child(odd) {background-color: #f2f2f2;}
+.tabla tr:nth-child(even){background-color: #e6e6e6;}
 
 .tabla tr:hover {background-color: #ddd;}
 
 .tabla th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #4CAF50;
-    color: white;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    background-color: #3498db;
+    color: #fff;
 }
 
 
